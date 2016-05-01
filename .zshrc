@@ -4,9 +4,8 @@ source "${HOME}/.zgen/zgen.zsh"
 if ! zgen saved; then
   echo "Creating a zgen save"
 
-  zgen oh-my-zsh
-
 # plugins
+  zgen oh-my-zsh plugins/sudo
   zgen oh-my-zsh plugins/git
   zgen oh-my-zsh plugins/sudo
   zgen oh-my-zsh plugins/colored-man-pages
@@ -18,17 +17,13 @@ if ! zgen saved; then
   zgen load jreese/zsh-titles
   zgen load david-treblig/locate-sublime-projects-cli
   zgen load zsh-users/zsh-syntax-highlighting
-  zgen load zsh-users/zsh-completions
-  zgen load unixorn/autoupdate-zgen
+  zgen load zsh-users/zsh-completions src
   zgen load zsh-users/zsh-history-substring-search
   zgen load djui/alias-tips
   zgen load chrissicool/zsh-256color
-  zgen load zsh-users/zsh-completions src
   # prezto and modules
   zgen prezto
-  zgen prezto prompt theme 'sorin'
+  zgen prezto prompt theme 'agnoster'
   zgen save
 fi
-autoload -Uz promptinit
-promptinit
-prompt agnoster
+
