@@ -87,3 +87,4 @@ set cmdheight=2
 	" Change the '2' value below to your preferred indentation level
 	set shiftwidth=4               " Number of spaces for
 	set softtabstop=4              " ...each indent level
+	set clipboard=unnamed
