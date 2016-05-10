@@ -1,5 +1,6 @@
 #!/bin/bash
-sudo apt install git vim zsh tmux dkms
+# git, vim, zsh, tmux for dev environ, dkms for virtualbox guest permissions, sni-qt for insync
+sudo apt install git vim zsh tmux dkms sni-qt
 cd ~
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cd ~
@@ -19,5 +20,5 @@ cd ~
 cd fonts
 ./install.sh
 git config --global user.name "Cole Swingholm"
-git config --global user.name "Cole Swingholm"
+git config --global user.email "cole.swingholm@gmail.com"
 
