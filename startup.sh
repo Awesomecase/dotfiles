@@ -1,6 +1,5 @@
 #!/bin/bash
-
-sudo apt install git vim zsh tmux 
+sudo apt install git vim zsh tmux dkms
 cd ~
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cd ~
