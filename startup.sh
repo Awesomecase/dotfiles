@@ -8,6 +8,7 @@ git clone https://github.com/Awesomecase/dotfiles.git
 ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
+ln -s $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 vim +PluginInstall +qall
 cd ~
 git clone https://github.com/tarjoilija/zgen.git .zgen
