@@ -12,13 +12,12 @@ vim +PluginInstall +qall
 cd ~
 git clone https://github.com/tarjoilija/zgen.git .zgen
 sudo chsh -s $(which zsh)
-zsh
-source ~/.zshrc
 cd ~
 git clone https://github.com/powerline/fonts.git
 cd ~
 cd fonts
 ./install.sh
+cd ~
 git config --global user.name "Cole Swingholm"
 git config --global user.email "cole.swingholm@gmail.com"
 
