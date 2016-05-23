@@ -1,3 +1,5 @@
 [user]
 	name = Cole Swingholm
 	email = cole.swingholm@gmail.com
+[core]
+	editor = vim -w
