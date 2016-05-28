@@ -3,3 +3,5 @@
 	email = cole.swingholm@gmail.com
 [core]
 	editor = vim -w
+[credential]
+	helper = cache
