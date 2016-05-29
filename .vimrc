@@ -62,8 +62,6 @@ set cmdheight=2
 	set backspace=indent,eol,start " Better handling of backspace key
 	set autoindent                 " Sane indenting when filetype not recognised
 	set nostartofline              " Emulate typical editor navigation behaviour
-	set nopaste                    " Start in normal (non-paste) mode
-	set pastetoggle=<f11>          " Use <F11> to toggle paste modes
 
 	" Status / Command Line Options:
 	set wildmenu                   " Better commandline completion
