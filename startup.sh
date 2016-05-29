@@ -9,7 +9,6 @@ ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
 ln -s $HOME/dotfiles/.gitconfig $HOME/.gitconfig
-ln -s $HOME/dotfiles/.ssh $HOME/.ssh
 vim +PluginInstall +qall
 cd ~
 git clone https://github.com/tarjoilija/zgen.git .zgen
