@@ -1,5 +1,5 @@
 #!/bin/bash
-# git, vim, zsh, tmux for dev environ, dkms for virtualbox guest permissions, sni-qt for insync
+# git, vim, zsh, tmux for dev environment, dkms for virtualbox guest permissions, sni-qt for insync
 sudo apt install git vim zsh tmux dkms sni-qt
 cd ~
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -19,4 +19,4 @@ cd ~
 cd fonts
 ./install.sh
 cd ~
-
+# sudo mount -t vboxsf FOLDERNAME /PATH/OF/FOLDER
