@@ -20,3 +20,5 @@ cd fonts
 ./install.sh
 cd ~
 # sudo mount -t vboxsf FOLDERNAME /PATH/OF/FOLDER
+sudo apt update
+sudo apt upgrade
