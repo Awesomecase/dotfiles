@@ -4,7 +4,6 @@ sudo apt install git vim zsh tmux dkms sni-qt
 cd ~
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cd ~
-git clone https://github.com/Awesomecase/dotfiles.git
 ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf
 ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
