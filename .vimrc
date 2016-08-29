@@ -49,10 +49,8 @@ set cmdheight=2
 	" Buffer (File) Options:
 	set hidden                     " Edit multiple unsaved files at the same time
 	set confirm                    " Prompt to save unsaved changes when exiting
-				       " Keep various histories between edits
 	set viminfo='1000,f1,<500,:100,/100,h
-
-	" Search Options:
+	"Search Options:
 	set hlsearch                   " Highlight searches. See below for more.
 	set ignorecase                 " Do case insensitive matching...
 	set smartcase                  " ...except when using capital letters
@@ -75,7 +73,6 @@ set cmdheight=2
 	" Interface Options:
 	set number                     " Display line numbers at left of screen
 	set visualbell                 " Flash the screen instead of beeping on errors
-	set t_vb=                      " And then disable even the flashing
 	set mouse=a                    " Enable mouse usage (all modes) in terminals
 	" Quickly time out on keycodes, but never time out on mappings
 	set notimeout ttimeout ttimeoutlen=200
