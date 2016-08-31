@@ -21,9 +21,9 @@ if ! zgen saved; then
   zgen load zsh-users/zsh-history-substring-search
   zgen load djui/alias-tips
   zgen load chrissicool/zsh-256color
-  # prezto and modules
+  # prezto and module
   zgen prezto
   zgen prezto prompt theme 'agnoster'
   zgen save
 fi
-
+alias cc++='g++ -Wall -Wextra -pendantic -std=c++11 -Wconversion'
