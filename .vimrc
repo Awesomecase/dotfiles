@@ -44,42 +44,42 @@ set cmdheight=2
 	""""""""""
 	" Options
 	""""""""""
-	" Use :help 'option (including the ' character) to learn more about each one.
+" Use :help 'option (including the ' character) to learn more about each one.
 	"
-	" Buffer (File) Options:
-	set hidden                     " Edit multiple unsaved files at the same time
-	set confirm                    " Prompt to save unsaved changes when exiting
-	set viminfo='1000,f1,<500,:100,/100,h
-	"Search Options:
-	set hlsearch                   " Highlight searches. See below for more.
-	set ignorecase                 " Do case insensitive matching...
-	set smartcase                  " ...except when using capital letters
-	set incsearch                  " Incremental search
+" Buffer (File) Options:
+set hidden                     " Edit multiple unsaved files at the same time
+set confirm                    " Prompt to save unsaved changes when exiting
+set viminfo='1000,f1,<500,:100,/100,h
+"Search Options:
+set hlsearch                   " Highlight searches. See below for more.
+set ignorecase                 " Do case insensitive matching...
+set smartcase                  " ...except when using capital letters
+set incsearch                  " Incremental search
 
-	" Insert (Edit) Options:
-	set backspace=indent,eol,start " Better handling of backspace key
-	set autoindent                 " Sane indenting when filetype not recognised
-	set nostartofline              " Emulate typical editor navigation behaviour
+" Insert (Edit) Options:
+set backspace=indent,eol,start " Better handling of backspace key
+set autoindent                 " Sane indenting when filetype not recognised
+set nostartofline              " Emulate typical editor navigation behaviour
 
-	" Status / Command Line Options:
-	set wildmenu                   " Better commandline completion
-	set wildmode=longest:full,full " Expand match on first Tab complete
-	set showcmd                    " Show (partial) command in status line.
-	set laststatus=2               " Always show a status line
-	set cmdheight=2                " Prevent "Press Enter" messages
-				       " Show detailed information in status line
-	set statusline=%f%m%r%h%w\ [%n:%{&ff}/%Y]%=[0x\%04.4B][%03v][%p%%\ line\ %l\ of\ %L]
+" Status / Command Line Options:
+set wildmenu                   " Better commandline completion
+set wildmode=longest:full,full " Expand match on first Tab complete
+set showcmd                    " Show (partial) command in status line.
+set laststatus=2               " Always show a status line
+set cmdheight=2                " Prevent "Press Enter" messages
+" Show detailed information in status line
+set statusline=%f%m%r%h%w\ [%n:%{&ff}/%Y]%=[0x\%04.4B][%03v][%p%%\ line\ %l\ of\ %L]
 
-	" Interface Options:
-	set number                     " Display line numbers at left of screen
-	set visualbell                 " Flash the screen instead of beeping on errors
-	set mouse=a                    " Enable mouse usage (all modes) in terminals
-	" Quickly time out on keycodes, but never time out on mappings
-	set notimeout ttimeout ttimeoutlen=200
+" Interface Options:
+set number                     " Display line numbers at left of screen
+set visualbell                 " Flash the screen instead of beeping on errors
+set mouse=a                    " Enable mouse usage (all modes) in terminals
+" Quickly time out on keycodes, but never time out on mappings
+set notimeout ttimeout ttimeoutlen=200
 
-	" Indentation Options:
-	set tabstop=4                  " NEVER change this!
-	" Change the '2' value below to your preferred indentation level
-	set shiftwidth=4               " Number of spaces for
-	set softtabstop=4              " ...each indent level
-	set clipboard=unnamed
+" Indentation Options:
+set tabstop=4                  " NEVER change this!
+" Change the '2' value below to your preferred indentation level
+set shiftwidth=4               " Number of spaces for
+set softtabstop=4              " ...each indent level
+set clipboard=unnamed

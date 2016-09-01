@@ -26,4 +26,4 @@ if ! zgen saved; then
   zgen prezto prompt theme 'agnoster'
   zgen save
 fi
-alias cc++='g++ -Wall -Wextra -pedantic -std=c++11 -Wconversion'
+alias cc++='g++ -Wall -Wextra -pedantic-errors -std=c++11 -Wconversion'
