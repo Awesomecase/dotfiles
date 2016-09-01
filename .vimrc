@@ -11,6 +11,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'Valloric/YouCompleteMe'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -70,7 +71,7 @@ set cmdheight=2                " Prevent "Press Enter" messages
 " Show detailed information in status line
 set statusline=%f%m%r%h%w\ [%n:%{&ff}/%Y]%=[0x\%04.4B][%03v][%p%%\ line\ %l\ of\ %L]
 
-" Interface Options:
+" Interface Options
 set number                     " Display line numbers at left of screen
 set visualbell                 " Flash the screen instead of beeping on errors
 set mouse=a                    " Enable mouse usage (all modes) in terminals
@@ -83,3 +84,8 @@ set tabstop=4                  " NEVER change this!
 set shiftwidth=4               " Number of spaces for
 set softtabstop=4              " ...each indent level
 set clipboard=unnamed
+set exrc "This option forces Vim to source .vimrc file if it present in working directory, thus providing a place to store project-specific configuration.
+set secure "This option will restrict usage of some commands in non-default .vimrc files; commands that write to file or execute shell commands are not allowed and map commands are displayed.
+set colorcolumn=80 "show the 80 column 
+highlight ColorColumn ctermbg=darkgray
+
