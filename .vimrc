@@ -11,7 +11,11 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'scrooloose/syntastic'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'Valloric/YouCompleteMe'
+Bundle 'wellle/tmux-complete.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -40,7 +44,6 @@ if &t_Co >2 || has("gui_running")
 	syntax on
 	set hlsearch
 endif
-set cmdheight=2
 
 	""""""""""
 	" Options
@@ -57,10 +60,14 @@ set ignorecase                 " Do case insensitive matching...
 set smartcase                  " ...except when using capital letters
 set incsearch                  " Incremental search
 
+t -g status-justify centre
 " Insert (Edit) Options:
 set backspace=indent,eol,start " Better handling of backspace key
 set autoindent                 " Sane indenting when filetype not recognised
 set nostartofline              " Emulate typical editor navigation behaviour
+set nopaste                    " start in normal (non-paste) mode
+set pastetoggle=<f11>          "Use <f11> to toggle paste mode
+
 
 " Status / Command Line Options:
 set wildmenu                   " Better commandline completion
@@ -68,7 +75,7 @@ set wildmode=longest:full,full " Expand match on first Tab complete
 set showcmd                    " Show (partial) command in status line.
 set laststatus=2               " Always show a status line
 set cmdheight=2                " Prevent "Press Enter" messages
-" Show detailed information in status line
+                               " Show detailed information in status line
 set statusline=%f%m%r%h%w\ [%n:%{&ff}/%Y]%=[0x\%04.4B][%03v][%p%%\ line\ %l\ of\ %L]
 
 " Interface Options
@@ -84,8 +91,25 @@ set tabstop=4                  " NEVER change this!
 set shiftwidth=4               " Number of spaces for
 set softtabstop=4              " ...each indent level
 set clipboard=unnamed
+set expandtab "	Use spaces instead when inserting a <Tab>. 
+set undofile  " Enable |persistent-undo|, allowing you to undo across sessions.
+
+
 set exrc "This option forces Vim to source .vimrc file if it present in working directory, thus providing a place to store project-specific configuration.
 set secure "This option will restrict usage of some commands in non-default .vimrc files; commands that write to file or execute shell commands are not allowed and map commands are displayed.
-set colorcolumn=80 "show the 80 column 
-highlight ColorColumn ctermbg=darkgray
 
+
+"Syntastic junk
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:ycm_show_diagnostics_ui = 0
+
+
+"tmux complete
+let g:tmuxcomplete#trigger = 'omnifunc'
