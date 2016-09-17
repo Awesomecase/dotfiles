@@ -10,6 +10,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'fweep/vim-zsh-path-completion'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
@@ -31,12 +32,11 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-if has("vms")
-	set nobackup
-else
-	set backup
-endif
-set history=100
+set undofile " Enable |persistent-undo|, allowing you to undo across sessions.
+set dir=~/.vim/swaps//
+set backupdir=~/.vim/backups//
+set undodir=~/.vim/undo//
+set history=10000
 set ruler
 set showcmd
 set incsearch
@@ -59,8 +59,7 @@ set hlsearch                   " Highlight searches. See below for more.
 set ignorecase                 " Do case insensitive matching...
 set smartcase                  " ...except when using capital letters
 set incsearch                  " Incremental search
-
-t -g status-justify centre
+set wrapscan                   " Wrap scan around end-of-file
 " Insert (Edit) Options:
 set backspace=indent,eol,start " Better handling of backspace key
 set autoindent                 " Sane indenting when filetype not recognised
@@ -92,8 +91,6 @@ set shiftwidth=4               " Number of spaces for
 set softtabstop=4              " ...each indent level
 set clipboard=unnamed
 set expandtab "	Use spaces instead when inserting a <Tab>. 
-set undofile  " Enable |persistent-undo|, allowing you to undo across sessions.
-
 
 set exrc "This option forces Vim to source .vimrc file if it present in working directory, thus providing a place to store project-specific configuration.
 set secure "This option will restrict usage of some commands in non-default .vimrc files; commands that write to file or execute shell commands are not allowed and map commands are displayed.
@@ -109,7 +106,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:ycm_show_diagnostics_ui = 0
-
+let g:syntastic_enable_signs = 1
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_cpp_gcc_args = "-Wall -Wextra -pedantic-errors -std=c++11 -Wconversion"
 
 "tmux complete
 let g:tmuxcomplete#trigger = 'omnifunc'

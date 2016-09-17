@@ -11,9 +11,12 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/colored-man-pages
   zgen oh-my-zsh plugins/pip
   zgen oh-my-zsh plugins/github
-  zgen oh-my-zsh plugins/rsync
   zgen oh-my-zsh plugins/python
   zgen oh-my-zsh plugins/command-not-found
+  zgen oh-my-zsh plugins/tmux
+  zgen oh-my-zsh plugins/debian
+
+
   zgen load jreese/zsh-titles
   zgen load david-treblig/locate-sublime-projects-cli
   zgen load zsh-users/zsh-syntax-highlighting
@@ -21,6 +24,7 @@ if ! zgen saved; then
   zgen load zsh-users/zsh-history-substring-search
   zgen load djui/alias-tips
   zgen load chrissicool/zsh-256color
+  zgen load unixorn/autoupdate-zgen
   # prezto and module
   zgen prezto
   zgen prezto prompt theme 'agnoster'
@@ -29,3 +33,4 @@ fi
 # Aliases
 alias cc++='g++ -Wall -Wextra -pedantic-errors -std=c++11 -Wconversion'
 # Startup shell
+export EDITOR='vim'
