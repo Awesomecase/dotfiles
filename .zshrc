@@ -27,10 +27,10 @@ if ! zgen saved; then
   zgen load unixorn/autoupdate-zgen
   # prezto and module
   zgen prezto
-  zgen prezto prompt theme 'agnoster'
+  zgen prezto prompt theme 'paradox'
   zgen save
 fi
 # Aliases
-alias cc++='g++ -Wall -Wextra -pedantic-errors -std=c++11 -Wconversion'
+alias cc++='g++ -time -Wall -Wextra -pedantic-errors -std=c++11 -Wconversion'
 # Startup shell
 export EDITOR='vim'

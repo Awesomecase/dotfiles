@@ -17,6 +17,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'Valloric/YouCompleteMe'
 Bundle 'wellle/tmux-complete.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -108,7 +109,7 @@ let g:syntastic_check_on_wq = 0
 let g:ycm_show_diagnostics_ui = 0
 let g:syntastic_enable_signs = 1
 let g:syntastic_aggregate_errors = 1
-let g:syntastic_cpp_gcc_args = "-Wall -Wextra -pedantic-errors -std=c++11 -Wconversion"
+let g:syntastic_cpp_gcc_args = "-Wall -time  -Wextra -pedantic-errors -std=c++11 -Wconversion"
 
 "tmux complete
 let g:tmuxcomplete#trigger = 'omnifunc'
