@@ -5,34 +5,26 @@ if ! zgen saved; then
   echo "Creating a zgen save"
 
 # plugins
-  zgen oh-my-zsh plugins/sudo
-  zgen oh-my-zsh plugins/git
-  zgen oh-my-zsh plugins/sudo
   zgen oh-my-zsh plugins/colored-man-pages
   zgen oh-my-zsh plugins/pip
   zgen oh-my-zsh plugins/github
   zgen oh-my-zsh plugins/python
   zgen oh-my-zsh plugins/command-not-found
-  zgen oh-my-zsh plugins/tmux
-  zgen oh-my-zsh plugins/debian
 
 
   zgen load jreese/zsh-titles
   zgen load zsh-users/zsh-syntax-highlighting
-  zgen load zsh-users/zsh-history-substring-search
   zgen load djui/alias-tips
   zgen load chrissicool/zsh-256color
   zgen load unixorn/autoupdate-zgen
-  # prezto and module
-  zgen prezto
-  zgen prezto prompt theme 'paradox'
+  
   zgen save
 fi
 ###### Startup shell ######
 export CDPATH='~/Documents'
 export EDITOR='vim'
 # Vim stuff
-export PAGER='vim -R'
+export PAGER='less'
 bindkey -v 
 bindkey '^R' history-incremental-search-backward
 export KEYTIMEOUT=1
