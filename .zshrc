@@ -18,9 +18,7 @@ if ! zgen saved; then
 
 
   zgen load jreese/zsh-titles
-  zgen load david-treblig/locate-sublime-projects-cli
   zgen load zsh-users/zsh-syntax-highlighting
-  zgen load zsh-users/zsh-completions src
   zgen load zsh-users/zsh-history-substring-search
   zgen load djui/alias-tips
   zgen load chrissicool/zsh-256color
@@ -30,7 +28,13 @@ if ! zgen saved; then
   zgen prezto prompt theme 'paradox'
   zgen save
 fi
+###### Startup shell ######
+export CDPATH='~/Documents'
+export EDITOR='vim'
+# Vim stuff
+export PAGER='vim -R'
+bindkey -v 
+bindkey '^R' history-incremental-search-backward
+export KEYTIMEOUT=1
 # Aliases
 alias cc++='g++ -time -Wall -Wextra -pedantic-errors -std=c++11 -Wconversion'
-# Startup shell
-export EDITOR='vim'
