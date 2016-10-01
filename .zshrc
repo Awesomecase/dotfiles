@@ -19,7 +19,7 @@ if ! zgen saved; then
   zgen load unixorn/autoupdate-zgen
   
   zgen prezto
-  zgen prezto prompt theme 'ys'
+  zgen prezto prompt theme 'agnoster'
 
   zgen save
 fi
