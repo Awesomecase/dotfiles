@@ -18,6 +18,9 @@ if ! zgen saved; then
   zgen load chrissicool/zsh-256color
   zgen load unixorn/autoupdate-zgen
   
+  zgen prezto
+  zgen prezto  prompt 'agnoster'
+
   zgen save
 fi
 ###### Startup shell ######
