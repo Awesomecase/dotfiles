@@ -19,6 +19,7 @@ cd ~
 cd fonts
 ./install.sh
 cd ~
+rm -rf ~/fonts/
 # sudo mount -t vboxsf FOLDERNAME /PATH/OF/FOLDER
 mkdir ~/.vim/backups/ ~/.vim/swaps/ ~/.vim/undo/
 sudo chmod 0750 ~/.vim/undo/ ~/.vim/backups/ ~/.vim/swaps/
