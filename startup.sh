@@ -10,7 +10,7 @@ ln -s "$HOME/dotfiles/.tmux.konf" "$HOME/.tmux.conf"
 ln -s "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
 ln -s "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
 ln -s "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
-ln -s /media/sf_Documents/ "$HOME/Documents/"
+ln -s /media/sf_Documents/* "$HOME/Documents/"
 vim +PluginInstall +qall
 cd ~
 git clone https://github.com/tarjoilija/zgen.git .zgen
