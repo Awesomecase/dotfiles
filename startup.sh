@@ -4,6 +4,7 @@ sudo apt install git vim zsh tmux dkms sni-qt g++ python-pip python3-pip python 
 cd ~
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cd ~
+sudo usermod -G vboxsf -a "$USER"
 ln -s "$HOME/dotfiles/.vimrc" "$HOME/.vimrc"
 ln -s "$HOME/dotfiles/.tmux.konf" "$HOME/.tmux.conf"
 ln -s "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
