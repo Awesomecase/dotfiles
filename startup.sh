@@ -12,6 +12,7 @@ ln -s "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
 ln -s "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
 ln -s "$HOME/dotfiles/.zshenv" "$HOME/.zshenv"
 ln -s /media/sf_Documents/* "$HOME/Documents/"
+ln -s "$HOME/dotfiles/.ycm_extra_conf.py" "$HOME/.ycm_extra_conf.py"
 vim +PluginInstall +qall
 cd ~
 git clone https://github.com/tarjoilija/zgen.git .zgen
