@@ -26,7 +26,6 @@ fi
 ###### Startup shell ######
 export CDPATH='~/Documents'
 export EDITOR='vim'
-ln -s /media/sf_Documents/* "$HOME/Documents/"
 # Vim stuff
 export PAGER='less'
 bindkey -v 

@@ -10,6 +10,7 @@ ln -s "$HOME/dotfiles/.tmux.konf" "$HOME/.tmux.conf"
 ln -s "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
 ln -s "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
 ln -s "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
+ln -s "$HOME/dotfiles/.zshenv" "$HOME/.zshenv"
 ln -s /media/sf_Documents/* "$HOME/Documents/"
 vim +PluginInstall +qall
 cd ~
@@ -26,5 +27,8 @@ rm -rf ~/fonts/
 mkdir ~/.vim/backups/ ~/.vim/swaps/ ~/.vim/undo/
 sudo chmod 0750 ~/.vim/undo/ ~/.vim/backups/ ~/.vim/swaps/
 sudo chown "$USER" ~/.vim/
+cd ~/.vim/bundle/YouCompleteMe
+./install.py -all
+cd
 sudo apt update
 sudo apt upgrade
