@@ -92,6 +92,7 @@ set shiftwidth=4               " Number of spaces for
 set softtabstop=4              " ...each indent level
 set clipboard=unnamed
 set expandtab "	Use spaces instead when inserting a <Tab>. 
+set shiftround
 
 set exrc "This option forces Vim to source .vimrc file if it present in working directory, thus providing a place to store project-specific configuration.
 set secure "This option will restrict usage of some commands in non-default .vimrc files; commands that write to file or execute shell commands are not allowed and map commands are displayed.
