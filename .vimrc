@@ -14,10 +14,10 @@ Plugin 'fweep/vim-zsh-path-completion'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'Valloric/YouCompleteMe'
 Bundle 'wellle/tmux-complete.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'Rip-Rip/clang_complete'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -114,5 +114,3 @@ let g:syntastic_cpp_gcc_args = "-Wall -time  -Wextra -pedantic-errors -std=c++11
 
 "tmux complete
 let g:tmuxcomplete#trigger = 'omnifunc'
-"YCM
-let g:ycm_global_ycm_extra_conf = '.ycm_extra_conf.py'
