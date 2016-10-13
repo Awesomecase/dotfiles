@@ -32,4 +32,4 @@ bindkey -v
 bindkey '^R' history-incremental-search-backward
 export KEYTIMEOUT=1
 # Aliases
-alias cc++='g++ -time -Wall -Wextra -pedantic-errors -std=c++11 -Wconversion'
+alias cc++='g++ -time -Wall -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion'
