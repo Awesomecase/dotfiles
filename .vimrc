@@ -111,4 +111,4 @@ let g:syntastic_aggregate_errors = 1
 let g:syntastic_cpp_gcc_args = "-Wall -time -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion"
 
 "tmux complete
-let g:tmuxcomplete#trigger = 'omnifunc'
+let g:tmuxcomplete#trigger = 'completefunc'

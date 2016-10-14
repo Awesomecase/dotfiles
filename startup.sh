@@ -6,12 +6,11 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cd ~
 sudo usermod -G vboxsf -a "$USER"
 ln -s "$HOME/dotfiles/.vimrc" "$HOME/.vimrc"
-ln -s "$HOME/dotfiles/.tmux.konf" "$HOME/.tmux.conf"
+ln -s "$HOME/dotfiles/.tmux.conf" "$HOME/.tmux.conf"
 ln -s "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
 ln -s "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
 ln -s "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
 ln -s "$HOME/dotfiles/.zshenv" "$HOME/.zshenv"
-ln -s /media/sf_Documents/* "$HOME/Documents/"
 vim +PluginInstall +qall
 cd ~
 git clone https://github.com/tarjoilija/zgen.git .zgen
@@ -25,7 +24,7 @@ cd ~
 rm -rf ~/fonts/
 # sudo mount -t vboxsf FOLDERNAME /PATH/OF/FOLDER
 mkdir ~/.vim/backups/ ~/.vim/swaps/ ~/.vim/undo/
-sudo chmod 0750 ~/.vim/undo/ ~/.vim/backups/ ~/.vim/swaps/
+sudo chmod 750 ~/.vim/undo/ ~/.vim/backups/ ~/.vim/swaps/
 sudo chown "$USER" ~/.vim/
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py -all
