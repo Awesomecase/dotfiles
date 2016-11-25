@@ -17,7 +17,10 @@ Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Bundle 'wellle/tmux-complete.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
-" All of your Plugins must be added before the following line
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-fugitive'
+Plugin 'majutsushi/tagbar'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -99,17 +102,29 @@ set secure "This option will restrict usage of some commands in non-default .vim
 
 "Syntastic junk
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+""set statusline+=%#warningmsg#
+""set statusline+=%{SyntasticStatuslineFlag()}
+""set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:ycm_show_diagnostics_ui = 0
+let g:syntastic_check_on_wq = 1
 let g:syntastic_enable_signs = 1
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_cpp_gcc_args = "-Wall -time -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion"
 
 "tmux complete
 let g:tmuxcomplete#trigger = 'completefunc'
+
+"airline 
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='base16_solarized'
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#hunks#enabled = 1
+let g:airline#extensions#hunks#non_zero_only = 1
+let g:airline#extensions#ycm#enabled = 1
+let g:airline#extensions#branch#empty_message = ''
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
