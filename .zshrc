@@ -32,4 +32,6 @@ bindkey -v
 bindkey '^R' history-incremental-search-backward
 export KEYTIMEOUT=1
 # Aliases
-alias cc++='g++ -time -Wall -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion'
+# alias cc++='g++ -time -Wall -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion'
+#Path
+PATH=/home/cole/bin:/home/cole/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/bin

@@ -15,7 +15,7 @@ Plugin 'fweep/vim-zsh-path-completion'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
-Bundle 'wellle/tmux-complete.vim'
+Plugin 'wellle/tmux-complete.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -104,17 +104,20 @@ set secure "This option will restrict usage of some commands in non-default .vim
 
 ""set statusline+=%#warningmsg#
 ""set statusline+=%{SyntasticStatuslineFlag()}
-""set statusline+=%*
+""set statusline+=%* 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_enable_signs = 1
 let g:syntastic_aggregate_errors = 1
-let g:syntastic_cpp_gcc_args = "-Wall -time -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion"
-
+let g:syntastic_cpp_checkers = ["gcc"]
+let g:syntastic_cpp_compiler = "g++"
+let g:syntastic_cpp_compiler_options = "-Wall -time -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion"
+"YCM
+let g:ycm_server_python_interpreter = "/usr/bin/python"
 "tmux complete
-let g:tmuxcomplete#trigger = 'completefunc'
+let g:tmuxcomplete#trigger = 'omnifunc'
 
 "airline 
 let g:airline_powerline_fonts = 1
