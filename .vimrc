@@ -94,7 +94,6 @@ set shiftwidth=4               " Number of spaces for
 set softtabstop=4              " ...each indent level
 set clipboard=unnamed
 set expandtab "	Use spaces instead when inserting a <Tab>. 
-set shiftround
 
 set exrc "This option forces Vim to source .vimrc file if it present in working directory, thus providing a place to store project-specific configuration.
 set secure "This option will restrict usage of some commands in non-default .vimrc files; commands that write to file or execute shell commands are not allowed and map commands are displayed.
@@ -102,18 +101,15 @@ set secure "This option will restrict usage of some commands in non-default .vim
 
 "Syntastic junk
 
-""set statusline+=%#warningmsg#
-""set statusline+=%{SyntasticStatuslineFlag()}
-""set statusline+=%* 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%* 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_enable_signs = 1
 let g:syntastic_aggregate_errors = 1
-let g:syntastic_cpp_checkers = ["gcc"]
-let g:syntastic_cpp_compiler = "g++"
-let g:syntastic_cpp_compiler_options = "-Wall -time -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion"
 "YCM
 let g:ycm_server_python_interpreter = "/usr/bin/python"
 "tmux complete
@@ -122,12 +118,13 @@ let g:tmuxcomplete#trigger = 'omnifunc'
 "airline 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='base16_solarized'
+let g:airline_theme='molokai'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
 let g:airline#extensions#hunks#non_zero_only = 1
 let g:airline#extensions#ycm#enabled = 1
 let g:airline#extensions#branch#empty_message = ''
+let g:airline#extensions#whitespace#enabled = 0
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
