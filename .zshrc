@@ -35,3 +35,6 @@ export KEYTIMEOUT=1
 # alias cc++='g++ -time -Wall -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion'
 #Path
 PATH=/home/cole/bin:/home/cole/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/bin
+export WORKON_HOME="$HOME/.virtualenvs"
+export PROJECT_HOME="$HOME/Documents/sf_Documents/"
+source '/usr/share/virtualenvwrapper/virtualenvwrapper.sh'
