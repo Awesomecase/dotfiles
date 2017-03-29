@@ -110,7 +110,7 @@ let g:syntastic_aggregate_errors = 1
 "YCM
 let g:ycm_server_python_interpreter = "/usr/bin/python"
 "tmux complete
-let g:tmuxcomplete#trigger = 'omnifunc'
+let g:tmuxcomplete#trigger = 'completefunc'
 
 "airline 
 let g:airline_powerline_fonts = 1
