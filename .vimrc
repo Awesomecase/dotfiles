@@ -21,6 +21,11 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'majutsushi/tagbar'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'paradigm/TextObjectify'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -109,9 +114,9 @@ let g:syntastic_enable_signs = 1
 let g:syntastic_aggregate_errors = 1
 "YCM
 let g:ycm_server_python_interpreter = "/usr/bin/python"
+let g:ycm_python_binary_path = 'python'
 "tmux complete
 let g:tmuxcomplete#trigger = 'completefunc'
-
 "airline 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
