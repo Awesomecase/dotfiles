@@ -2,6 +2,6 @@
 	name = Cole Swingholm
 	email = cole.swingholm@gmail.com
 [core]
-	editor = vim -w
+	editor = vim 
 [credential]
 	helper = cache
