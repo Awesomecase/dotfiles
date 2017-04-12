@@ -30,6 +30,8 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'justinmk/vim-dirvish'
 Plugin 'wellle/targets.vim'
 Plugin 'ervandew/supertab'
+Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'ajh17/VimCompletesMe'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
