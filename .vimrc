@@ -10,10 +10,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'w0rp/ale'
 Plugin 'fweep/vim-zsh-path-completion'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'wellle/tmux-complete.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -24,7 +24,12 @@ Plugin 'majutsushi/tagbar'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'michaeljsmith/vim-indent-object'
-Plugin 'paradigm/TextObjectify'
+Plugin 'tpope/vim-surround'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'justinmk/vim-dirvish'
+Plugin 'wellle/targets.vim'
+Plugin 'ervandew/supertab'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -58,6 +63,7 @@ endif
 	""""""""""
 " Use :help 'option (including the ' character) to learn more about each one.
 	"
+set complete-=i
 " Buffer (File) Options:
 set hidden                     " Edit multiple unsaved files at the same time
 set confirm                    " Prompt to save unsaved changes when exiting
@@ -86,7 +92,7 @@ set cmdheight=2                " Prevent "Press Enter" messages
 set statusline=%f%m%r%h%w\ [%n:%{&ff}/%Y]%=[0x\%04.4B][%03v][%p%%\ line\ %l\ of\ %L]
 
 " Interface Options
-set number                     " Display line numbers at left of screen
+set number relativenumber                    " Display line numbers at left of screen
 set visualbell                 " Flash the screen instead of beeping on errors
 set mouse=a                    " Enable mouse usage (all modes) in terminals
 " Quickly time out on keycodes, but never time out on mappings
@@ -99,34 +105,33 @@ set shiftwidth=4               " Number of spaces for
 set softtabstop=4              " ...each indent level
 set clipboard=unnamed
 set expandtab "	Use spaces instead when inserting a <Tab>. 
+set autoindent
 
 set exrc "This option forces Vim to source .vimrc file if it present in working directory, thus providing a place to store project-specific configuration.
 set secure "This option will restrict usage of some commands in non-default .vimrc files; commands that write to file or execute shell commands are not allowed and map commands are displayed.
 
-
+"ale
+let g:ale_sign_column_always = 1
 "Syntastic junk
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_enable_signs = 1
-let g:syntastic_aggregate_errors = 1
-"YCM
-let g:ycm_server_python_interpreter = "/usr/bin/python"
-let g:ycm_python_binary_path = 'python'
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 1
+"let g:syntastic_enable_signs = 1
+"let g:syntastic_aggregate_errors = 1
 "tmux complete
 let g:tmuxcomplete#trigger = 'completefunc'
 "airline 
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='molokai'
-let g:airline#extensions#syntastic#enabled = 1
+"let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
 let g:airline#extensions#hunks#non_zero_only = 1
-let g:airline#extensions#ycm#enabled = 1
 let g:airline#extensions#branch#empty_message = ''
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#virtualenv#enabled = 1
+let g:airline#extensions#ctrlp#show_adjacent_modes = 1
+let g:airline#extensions#tagbar#enabled = 1
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
