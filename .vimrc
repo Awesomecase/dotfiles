@@ -10,6 +10,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'w0rp/ale'
 Plugin 'fweep/vim-zsh-path-completion'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -21,11 +22,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'majutsushi/tagbar'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'tpope/vim-surround'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'justinmk/vim-dirvish'
 Plugin 'wellle/targets.vim'
@@ -114,6 +112,17 @@ set secure "This option will restrict usage of some commands in non-default .vim
 
 "ale
 let g:ale_sign_column_always = 1
+let g:ale_history_enabled = 1
+let g:ale_history_log_output = 1
+ let g:ale_linters = {
+\ 'c': ['gcc'],
+\ 'cpp': ['gcc'],
+\ 'python': ['flake8'],
+\ 'asm': ['gcc'],} 
+let g:ale_c_gcc_options = ''
+let g:ale_cpp_gcc_options = '-ggdb -time -Wall -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion'
+let g:ale_python_flake8_args = ''
+let g:ale_sh_shellcheck_options =''
 "Syntastic junk
 "let g:syntastic_always_populate_loc_list = 1
 "let g:syntastic_auto_loc_list = 1
@@ -122,7 +131,8 @@ let g:ale_sign_column_always = 1
 "let g:syntastic_enable_signs = 1
 "let g:syntastic_aggregate_errors = 1
 "tmux complete
-let g:tmuxcomplete#trigger = 'completefunc'
+"let g:tmuxcomplete#trigger = 'completefunc'
+
 "airline 
 let g:airline_powerline_fonts = 1
 let g:airline_theme='molokai'
@@ -135,5 +145,8 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#virtualenv#enabled = 1
 let g:airline#extensions#ctrlp#show_adjacent_modes = 1
 let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
+"resets last seach pattern by hitting return
+nnoremap <CR> :noh<CR><CR>
