@@ -28,8 +28,6 @@ rm -rf ~/fonts/
 mkdir ~/.vim/backups/ ~/.vim/swaps/ ~/.vim/undo/
 sudo chmod 750 ~/.vim/undo/ ~/.vim/backups/ ~/.vim/swaps/
 sudo chown "$USER" ~/.vim/
-cd ~/.vim/bundle/YouCompleteMe || exit
-./install.py -all
 cd || exit
 git clone https://github.com/longld/peda.git ~/peda
 if [ -e /home/cole/.gdbinit ]

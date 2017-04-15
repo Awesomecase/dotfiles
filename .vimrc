@@ -122,14 +122,8 @@ let g:ale_history_log_output = 1
 let g:ale_c_gcc_options = ''
 let g:ale_cpp_gcc_options = '-ggdb -time -Wall -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion'
 let g:ale_python_flake8_args = ''
-let g:ale_sh_shellcheck_options =''
-"Syntastic junk
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 1
-"let g:syntastic_enable_signs = 1
-"let g:syntastic_aggregate_errors = 1
+let g:ale_sh_shellcheck_options = ''
+let g:dirvish_mode = ':sort r /[^\/]$/'
 "tmux complete
 "let g:tmuxcomplete#trigger = 'completefunc'
 
