@@ -10,7 +10,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'w0rp/ale'
 Plugin 'fweep/vim-zsh-path-completion'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -27,7 +26,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'justinmk/vim-dirvish'
 Plugin 'wellle/targets.vim'
-Plugin 'ervandew/supertab'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'ajh17/VimCompletesMe'
 
@@ -112,6 +110,8 @@ set secure "This option will restrict usage of some commands in non-default .vim
 
 "ale
 let g:ale_sign_column_always = 1
+let g:ale_open_list = 1
+let g:ale_keep_list_window_open = 1
 let g:ale_history_enabled = 1
 let g:ale_history_log_output = 1
  let g:ale_linters = {
@@ -123,7 +123,6 @@ let g:ale_c_gcc_options = ''
 let g:ale_cpp_gcc_options = '-ggdb -time -Wall -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion'
 let g:ale_python_flake8_args = ''
 let g:ale_sh_shellcheck_options = ''
-let g:dirvish_mode = ':sort r /[^\/]$/'
 "tmux complete
 "let g:tmuxcomplete#trigger = 'completefunc'
 
@@ -142,5 +141,6 @@ let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
+let g:dirvish_mode = ':sort r /[^\/]$/'
 "resets last seach pattern by hitting return
 nnoremap <CR> :noh<CR><CR>
