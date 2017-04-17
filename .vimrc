@@ -11,6 +11,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'w0rp/ale'
+Plugin 'Townk/vim-autoclose'
 Plugin 'fweep/vim-zsh-path-completion'
 Plugin 'christoomey/vim-tmux-navigator'
 "Plugin 'scrooloose/syntastic'
