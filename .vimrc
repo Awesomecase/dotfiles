@@ -110,8 +110,6 @@ set secure "This option will restrict usage of some commands in non-default .vim
 
 "ale
 let g:ale_sign_column_always = 1
-let g:ale_open_list = 1
-let g:ale_keep_list_window_open = 1
 let g:ale_history_enabled = 1
 let g:ale_history_log_output = 1
  let g:ale_linters = {

@@ -24,7 +24,6 @@ if ! zgen saved; then
   zgen save
 fi
 ###### Startup shell ######
-export CDPATH='~/Documents/sf_Documents/'
 export EDITOR='vim'
 # Vim stuff
 export PAGER='less'
@@ -37,12 +36,10 @@ promptinit
 prompt giddie
 # Aliases
 # alias cc++='g++ -time -Wall -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion'
-#Path
-PATH=/home/cole/bin:/home/cole/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:~/bin
 # virtualenv and pyenv
 export WORKON_HOME="$HOME/.virtualenvs"
 export PROJECT_HOME="$HOME/Documents/sf_Documents/"
 source "/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
-export PATH="/home/cole/.pyenv/bin:$PATH"
+export PATH="/root/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
