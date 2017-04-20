@@ -40,6 +40,3 @@ prompt giddie
 export WORKON_HOME="$HOME/.virtualenvs"
 export PROJECT_HOME="$HOME/Documents/sf_Documents/"
 source "/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
-export PATH="/root/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
