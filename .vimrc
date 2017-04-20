@@ -29,6 +29,9 @@ Plugin 'justinmk/vim-dirvish'
 Plugin 'wellle/targets.vim'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'ajh17/VimCompletesMe'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'benmills/vimux'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -143,3 +146,7 @@ nmap <F8> :TagbarToggle<CR>
 let g:dirvish_mode = ':sort r /[^\/]$/'
 "resets last seach pattern by hitting return
 nnoremap <CR> :noh<CR><CR>
+"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
