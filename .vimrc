@@ -118,7 +118,7 @@ let g:ale_history_enabled = 1
 let g:ale_history_log_output = 1
  let g:ale_linters = {
 \ 'c': ['gcc'],
-\ 'cpp': ['gcc'],
+\ 'cpp': ['g++'],
 \ 'python': ['flake8'],
 \ 'asm': ['gcc'],} 
 let g:ale_c_gcc_options = ''
@@ -150,3 +150,5 @@ nnoremap <CR> :noh<CR><CR>
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"vimux
+let VimuxUseNearest = 1
