@@ -11,7 +11,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'w0rp/ale'
-Plugin 'Townk/vim-autoclose'
 Plugin 'fweep/vim-zsh-path-completion'
 Plugin 'christoomey/vim-tmux-navigator'
 "Plugin 'scrooloose/syntastic'
@@ -28,10 +27,11 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'justinmk/vim-dirvish'
 Plugin 'wellle/targets.vim'
 Plugin 'ludovicchabant/vim-gutentags'
-Plugin 'ajh17/VimCompletesMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'benmills/vimux'
+Plugin 'ervandew/supertab'
+Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -104,10 +104,17 @@ set notimeout ttimeout ttimeoutlen=200
 set tabstop=4                  " NEVER change this!
 " Change the '2' value below to your preferred indentation level
 set shiftwidth=4               " Number of spaces for
-set softtabstop=4              " ...each indent level
+set softtabstop=4              " Makes tabs 4 spaces
 set clipboard=unnamed
 set expandtab "	Use spaces instead when inserting a <Tab>. 
 set autoindent
+set cursorline          " highlight current line
+
+"Folding
+set foldenable          " enable folding
+set foldlevel=99
+set foldnestmax=10      " 10 nested fold max
+set foldmethod=indent   " fold based on indent level
 
 set exrc "This option forces Vim to source .vimrc file if it present in working directory, thus providing a place to store project-specific configuration.
 set secure "This option will restrict usage of some commands in non-default .vimrc files; commands that write to file or execute shell commands are not allowed and map commands are displayed.
