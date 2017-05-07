@@ -5,3 +5,5 @@
 	editor = vim 
 [credential]
 	helper = cache
+[push]
+	default = simple
