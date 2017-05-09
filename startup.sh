@@ -10,10 +10,9 @@ ln -s "$HOME/dotfiles/.tmux.conf" "$HOME/.tmux.conf"
 ln -s "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
 ln -s "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
 cd ~ || exit
-rm -y "$HOME/gitconfig" 
+rm -f "$HOME/gitconfig" 
 ln -s "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
 ln -s "$HOME/dotfiles/.zshenv" "$HOME/.zshenv"
-vim +PluginInstall +qall
 cd ~ || exit
 git clone https://github.com/tarjoilija/zgen.git .zgen
 sudo chsh -s "$(which zsh)"
