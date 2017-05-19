@@ -2,8 +2,6 @@
 # git, vim, zsh, tmux for dev environment, dkms for virtualbox guest permissions, sni-qt for insync
 sudo apt install git vim libevent-dev ncurses-dev zsh tmux dkms sni-qt g++ python-pip python3-pip python python3 cmake build-essential python-dev python3-dev sshpass xclip sshfs shellcheck checkinstall exuberant-ctags flake8 virtualbox-guest-utils nfs-common cifs-utils
 cd ~ || exit
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-cd ~ || exit
 sudo usermod -G vboxsf -a "$USER"
 ln -s "$HOME/dotfiles/.vimrc" "$HOME/.vimrc"
 ln -s "$HOME/dotfiles/.tmux.conf" "$HOME/.tmux.conf"
