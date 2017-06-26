@@ -36,3 +36,4 @@ promptinit
 prompt giddie
 # Aliases
 # alias cc++='g++ -time -Wall -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion'
+export PATH="/home/cole/anaconda3/bin:$PATH"
