@@ -14,7 +14,6 @@ if ! zgen saved; then
   zgen load desyncr/auto-ls
   zgen load Tarrasch/zsh-command-not-found
   zgen load zdharma/fast-syntax-highlighting
-  zgen load zgen load supercrabtree/k
   
   zgen prezto
   zgen prezto utility
