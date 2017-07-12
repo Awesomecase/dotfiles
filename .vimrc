@@ -84,11 +84,6 @@ set mouse=a                    " Enable mouse usage (all modes) in terminals
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
 
-" Indentation Options:
-set tabstop=4                  " NEVER change this!
-" Change the '2' value below to your preferred indentation level
-set shiftwidth=4               " Number of spaces for
-set softtabstop=4              " Makes tabs 4 spaces
 set clipboard=unnamed
 set expandtab "	Use spaces instead when inserting a <Tab>. 
 set autoindent
@@ -153,3 +148,8 @@ nmap zuz <Plug>(FastFoldUpdate)
 let g:fastfold_savehook = 1
 let g:fastfold_fold_command_suffixes = ['x','X','a','A','o','O','c','C','r','R','m','M','i','n','N']
 let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
+" Indentation Options:
+set tabstop=4                  " NEVER change this!
+" Change the '2' value below to your preferred indentation level
+set shiftwidth=4               " Number of spaces for
+set softtabstop=4              " Makes tabs 4 spaces

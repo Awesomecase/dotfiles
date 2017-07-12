@@ -11,15 +11,16 @@ if ! zgen saved; then
   zgen load djui/alias-tips
   zgen load chrissicool/zsh-256color
   zgen load unixorn/autoupdate-zgen
+  zgen load desyncr/auto-ls
+  zgen load Tarrasch/zsh-command-not-found
+  zgen load zdharma/fast-syntax-highlighting
+  zgen load zgen load supercrabtree/k
   
   zgen prezto
-  zgen prezto command-not-found
   zgen prezto utility
   zgen prezto git
   zgen prezto completion
   zgen prezto python
-  zgen prezto syntax-highlighting
-  zgen prezto history-substring-search
 
   zgen save
 fi
