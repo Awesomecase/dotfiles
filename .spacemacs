@@ -20,7 +20,7 @@ values."
    ;; installation feature and you have to explicitly list a layer in the
    ;; variable `dotspacemacs-configuration-layers' to install it.
    ;; (default 'unused)
-   dotspacemacs-enable-lazy-installation 'all
+   dotspacemacs-enable-lazy-installation 'unused
    ;; If non-nil then Spacemacs will ask for confirmation before installing
    ;; a layer lazily. (default t)
    dotspacemacs-ask-for-lazy-installation t
@@ -44,16 +44,22 @@ values."
      markdown
      org
      asm
-     c-c++
+     (c-c++ :variables
+            c-c++-default-mode-for-headers 'c++-mode
+            c-c++-enable-clang-support t)
      shell-scripts
      (python :variables
-             python-test-runner 'pytest)
+             python-test-runner 'pytest
+             python-enable-yapf-format-on-save t)
      (latex :variables
             latex-enable-auto-fill t
             latex-enable-folding t)
      (shell :variables
              shell-default-height 30
-             shell-default-position 'bottom)
+             shell-default-position 'bottom
+             shell-default-shell 'term
+             shell-default-term-shell "/usr/bin/tmux"
+             shell-enable-smart-eshell t)
      spell-checking
      syntax-checking
      version-control

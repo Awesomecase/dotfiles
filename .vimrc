@@ -16,16 +16,18 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-repeat'
 Plug 'justinmk/vim-dirvish'
 Plug 'wellle/targets.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'benmills/vimux'
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-repeat'
+Plug 'tmhedberg/SimpylFold'
+Plug 'kopischke/vim-stay'
+Plug 'Konfekt/FastFold'
+
 
 call plug#end()
 
@@ -97,6 +99,7 @@ set foldenable          " enable folding
 set foldlevel=99
 set foldnestmax=10      " 10 nested fold max
 set foldmethod=indent   " fold based on indent level
+set viewoptions=cursor,folds,slash,unix
 
 set exrc "This option forces Vim to source .vimrc file if it present in working directory, thus providing a place to store project-specific configuration.
 set secure "This option will restrict usage of some commands in non-default .vimrc files; commands that write to file or execute shell commands are not allowed and map commands are displayed.
@@ -105,21 +108,25 @@ set secure "This option will restrict usage of some commands in non-default .vim
 let g:ale_sign_column_always = 1
 let g:ale_history_enabled = 1
 let g:ale_history_log_output = 1
- let g:ale_linters = {
-\ 'c': ['gcc'],
-\ 'cpp': ['g++'],
-\ 'python': ['flake8'],
-\ 'asm': ['gcc'],} 
+let g:ale_linters = {
+\ 'c': ['clang'],
+\ 'cpp': ['clang'],
+\ 'python': ['pylint', "mypy"],
+\ 'asm': ['gcc'],}
+ 
 let g:ale_c_gcc_options = ''
 let g:ale_cpp_gcc_options = '-ggdb -time -Wall -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion'
-let g:ale_python_flake8_args = ''
-let g:ale_sh_shellcheck_options = ''
+let g:ale_sh_shellcheck_options = '-s bash'
+let g:ale_python_pylint_options = "--load-plugins=pylint.extensions.docparams"
+let g:ale_fixers = {
+            \ 'python': [
+            \ 'yapf']}
+nmap <F7> <Plug>(ale_fix)
 "tmux complete
 "let g:tmuxcomplete#trigger = 'completefunc'
 
 "airline 
 let g:airline_powerline_fonts = 1
-let g:airline_theme='molokai'
 "let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
@@ -139,5 +146,10 @@ nnoremap <CR> :noh<CR><CR>
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-"vimux
-let VimuxUseNearest = 1
+"SimplyFold
+let g:SimpylFold_docstring_preview = 1
+"fastfold
+nmap zuz <Plug>(FastFoldUpdate)
+let g:fastfold_savehook = 1
+let g:fastfold_fold_command_suffixes = ['x','X','a','A','o','O','c','C','r','R','m','M','i','n','N']
+let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
