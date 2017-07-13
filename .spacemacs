@@ -325,6 +325,12 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setenv "WORKON_HOME" "/home/cole/anaconda/envs")
   (add-hook 'doc-view-mode-hook 'auto-revert-mode)
+  (add-hook 'python-mode-hook (lambda ()
+                              (flycheck-mode 1)
+                              (semantic-mode 1)
+                              (setq flycheck-checker 'python-pylint
+                                    flycheck-checker-error-threshold 900
+                                    flycheck-pylintrc "~/.pylintrc")))
 
   )
 
