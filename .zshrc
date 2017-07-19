@@ -37,4 +37,5 @@ prompt giddie
 eval "$(fasd --init posix-alias zsh-hook)"
 # Aliases
 # alias cc++='g++ -time -Wall -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion'
+alias ctags="exctags"
 export PATH="/home/cole/anaconda3/bin:$PATH"
