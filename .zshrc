@@ -19,7 +19,6 @@ if ! zgen saved; then
   zgen prezto utility
   zgen prezto git
   zgen prezto completion
-  zgen prezto python
 
   zgen save
 fi
@@ -38,4 +37,3 @@ eval "$(fasd --init posix-alias zsh-hook)"
 # Aliases
 # alias cc++='g++ -time -Wall -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion'
 alias ctags="exctags"
-export PATH="/home/cole/anaconda3/bin:$PATH"

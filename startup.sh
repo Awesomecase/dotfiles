@@ -16,12 +16,6 @@ cd ~ || exit
 git clone https://github.com/tarjoilija/zgen.git .zgen
 sudo chsh -s "$(which zsh)"
 cd ~ || exit
-git clone https://github.com/powerline/fonts.git
-cd ~ || exit
-cd fonts || exit
-./install.sh
-cd ~ || exit
-rm -rf ~/fonts/
 # sudo mount -t vboxsf FOLDERNAME /PATH/OF/FOLDER
 mkdir ~/.vim/backups/ ~/.vim/swaps/ ~/.vim/undo/
 sudo chmod 750 ~/.vim/undo/ ~/.vim/backups/ ~/.vim/swaps/
