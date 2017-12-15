@@ -1,6 +1,6 @@
 #!/bin/bash
 # git, vim, zsh, tmux for dev environment, dkms for virtualbox guest permissions, sni-qt for insync
-sudo apt install silversearcher-ag git vim libevent-dev ncurses-dev zsh tmux dkms sni-qt g++ python-pip python3-pip python python3 cmake build-essential python-dev python3-dev sshpass xclip sshfs shellcheck checkinstall exuberant-ctags pylint virtualbox-guest-utils nfs-common cifs-utils automake autotools-dev libtool
+sudo apt install git vim libevent-dev ncurses-dev zsh tmux dkms sni-qt g++ python-pip python3-pip python python3 cmake build-essential python-dev python3-dev sshpass xclip sshfs shellcheck checkinstall virtualbox-guest-utils nfs-common cifs-utils automake autotools-dev libtool default-jdk
 cd ~ || exit
 sudo usermod -G vboxsf -a "$USER"
 ln -s "$HOME/dotfiles/.vimrc" "$HOME/.vimrc"
@@ -30,8 +30,6 @@ else
 fi
 echo 'DONE! debug your program with gdb and enjoy'
 cd || exit
-wget https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh
-bash Anaconda3-4.4.0-Linux-x86_64.sh
-pip install pytest pytest-cov pytest-catchlog pytest-sugar pytest-mock requests_mock requests pdbpp ipython 
+pip install pytest pytest-cov pytest-catchlog pytest-sugar pytest-mock requests_mock requests pdbpp ipython pylint
 sudo apt update
 sudo apt upgrade

@@ -96,6 +96,11 @@ set foldnestmax=10      " 10 nested fold max
 set foldmethod=indent   " fold based on indent level
 set viewoptions=cursor,folds,slash,unix
 
+" Indentation Options:
+set tabstop=4                  " NEVER change this!
+" Change the '2' value below to your preferred indentation level
+set shiftwidth=4               " Number of spaces for
+set softtabstop=4              " Makes tabs 4 spaces
 set exrc "This option forces Vim to source .vimrc file if it present in working directory, thus providing a place to store project-specific configuration.
 set secure "This option will restrict usage of some commands in non-default .vimrc files; commands that write to file or execute shell commands are not allowed and map commands are displayed.
 
@@ -148,8 +153,6 @@ nmap zuz <Plug>(FastFoldUpdate)
 let g:fastfold_savehook = 1
 let g:fastfold_fold_command_suffixes = ['x','X','a','A','o','O','c','C','r','R','m','M','i','n','N']
 let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
-" Indentation Options:
-set tabstop=4                  " NEVER change this!
-" Change the '2' value below to your preferred indentation level
-set shiftwidth=4               " Number of spaces for
-set softtabstop=4              " Makes tabs 4 spaces
+
+"vim-tmux-navigator
+let g:tmux_navigator_save_on_switch = 1
