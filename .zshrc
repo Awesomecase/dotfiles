@@ -5,15 +5,15 @@ if ! zgen saved; then
   echo "Creating a zgen save"
 
 # plugins
-  zgen oh-my-zsh plugins/colored-man-pages
   zgen load jreese/zsh-titles
-
   zgen load djui/alias-tips
   zgen load chrissicool/zsh-256color
   zgen load unixorn/autoupdate-zgen
   zgen load desyncr/auto-ls
   zgen load Tarrasch/zsh-command-not-found
   zgen load zdharma/fast-syntax-highlighting
+  zgen load zuxfoucault/colored-man-pages_mod
+  zgen load psprint/zsh-cmd-architect
   
   zgen prezto
   zgen prezto utility
