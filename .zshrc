@@ -13,7 +13,6 @@ if ! zgen saved; then
   zgen load Tarrasch/zsh-command-not-found
   zgen load zdharma/fast-syntax-highlighting
   zgen load zuxfoucault/colored-man-pages_mod
-  zgen load psprint/zsh-cmd-architect 
   zgen load RobSis/zsh-completion-generator
 
   zgen prezto
