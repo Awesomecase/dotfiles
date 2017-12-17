@@ -14,6 +14,8 @@ if ! zgen saved; then
   zgen load zdharma/fast-syntax-highlighting
   zgen load zuxfoucault/colored-man-pages_mod
   zgen load psprint/zsh-cmd-architect 
+  zgen load RobSis/zsh-completion-generator
+
   zgen prezto
   zgen prezto utility
   zgen prezto git
