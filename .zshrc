@@ -14,6 +14,7 @@ if ! zgen saved; then
   zgen load zdharma/fast-syntax-highlighting
   zgen load zuxfoucault/colored-man-pages_mod
   zgen load RobSis/zsh-completion-generator
+  zgen load zsh-users/zsh-autosuggestions
 
   zgen prezto
   zgen prezto utility
