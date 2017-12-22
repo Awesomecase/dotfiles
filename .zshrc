@@ -38,7 +38,7 @@ eval "$(fasd --init auto)"
 # Aliases
 # alias cc++='g++ -time -Wall -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion'
 eval `ssh-agent -s`
-ssh-add ~/.ssh/id_rsa
+ssh-add ~/.ssh/Github
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 #export SDKMAN_DIR="/home/cole/.sdkman"
 #[[ -s "/home/cole/.sdkman/bin/sdkman-init.sh" ]] && source "/home/cole/.sdkman/bin/sdkman-init.sh" > /dev/null 2>&1
