@@ -1,6 +1,6 @@
 #!/bin/bash
 # git, vim, zsh, tmux for dev environment, dkms for virtualbox guest permissions, sni-qt for insync
-sudo apt install git vim libevent-dev ncurses-dev zsh tmux dkms sni-qt g++ python-pip python3-pip python python3 cmake build-essential python-dev python3-dev sshpass xclip sshfs shellcheck checkinstall virtualbox-guest-utils nfs-common cifs-utils automake autotools-dev libtool default-jdk lastpass-cli ruby
+sudo apt install git vim libevent-dev ncurses-dev zsh tmux dkms sni-qt g++ python-pip python3-pip python python3 cmake build-essential python-dev python3-dev sshpass xclip sshfs shellcheck checkinstall virtualbox-guest-utils nfs-common cifs-utils automake autotools-dev libtool default-jdk lastpass-cli ruby ruby-dev
 cd ~ || exit
 sudo usermod -G vboxsf -a "$USER"
 ln -s "$HOME/dotfiles/.vimrc" "$HOME/.vimrc"
@@ -30,6 +30,7 @@ else
 fi
 echo 'DONE! debug your program with gdb and enjoy'
 cd || exit
-pip install pytest pytest-cov pytest-catchlog pytest-sugar pytest-mock requests_mock requests pdbpp ipython pylint
+sudo gem install lastpass-ssh bropages
+#pip install pytest pytest-cov pytest-catchlog pytest-sugar pytest-mock requests_mock requests pdbpp ipython pylint
 sudo apt update
 sudo apt upgrade
