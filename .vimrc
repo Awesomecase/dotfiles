@@ -156,3 +156,5 @@ let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
 
 "vim-tmux-navigator
 let g:tmux_navigator_save_on_switch = 1
+"
+autocmd Filetype gitcommit setlocal spell textwidth=72

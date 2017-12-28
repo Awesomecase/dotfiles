@@ -1,6 +1,4 @@
 # Cole Swingholm's dotfiles
-## The master branch is for gnome
-## The kali branch is for kali
 ## I use vim, tmux, and zsh for most everything
 ### I don't use a tmux plugin manager
 ### For my vim plugins I use vim plug

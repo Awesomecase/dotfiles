@@ -1,0 +1,17 @@
+#!/bin/sh
+cd ~/vim
+./configure --enable-fail-if-missing \
+            --with-features=huge \
+            --enable-multibyte \
+            --enable-rubyinterp=yes \
+            --enable-pythoninterp=yes \
+            --enable-python3interp=yes \
+            --enable-perlinterp=yes \
+            --enable-luainterp=yes \
+	    --enable-gtk3-check \
+            --enable-gui=auto \
+            --enable-cscope \
+            --enable-fontset \
+            --enable-xim \
+            --enable-terminal \
+
