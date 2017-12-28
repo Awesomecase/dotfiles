@@ -35,6 +35,7 @@ autoload -Uz promptinit
 promptinit
 prompt giddie
 eval "$(fasd --init auto)"
+eval "$(pipenv --completion)"
 # Aliases
 # alias cc++='g++ -time -Wall -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion'
 lpass status > /dev/null 2>&1
@@ -45,9 +46,6 @@ ssh-add -l > /dev/null 2>&1
 if [[ $? != 0 ]]; then
     lastpass-ssh
 fi
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 #export SDKMAN_DIR="/home/cole/.sdkman"
 #[[ -s "/home/cole/.sdkman/bin/sdkman-init.sh" ]] && source "/home/cole/.sdkman/bin/sdkman-init.sh" > /dev/null 2>&1

@@ -2,7 +2,6 @@ set nocompatible              " be iMproved, required
 " Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
 call plug#begin('~/.vim/bundle')
 
-Plug 'w0rp/ale'
 Plug 'fweep/vim-zsh-path-completion'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'airblade/vim-gitgutter'
@@ -27,6 +26,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tmhedberg/SimpylFold'
 Plug 'kopischke/vim-stay'
 Plug 'Konfekt/FastFold'
+Plug 'w0rp/ale'
 
 
 call plug#end()
