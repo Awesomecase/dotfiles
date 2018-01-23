@@ -1,26 +1,28 @@
 #!/bin/bash
 # git, vim, zsh, tmux for dev environment, dkms for virtualbox guest permissions, sni-qt for insync
-sudo apt install git vim libevent-dev ncurses-dev zsh tmux dkms sni-qt g++ python-pip python3-pip python python3 cmake build-essential python-dev python3-dev sshpass xclip sshfs shellcheck checkinstall virtualbox-guest-utils nfs-common cifs-utils automake autotools-dev libtool default-jdk lastpass-cli ruby ruby-dev curl
-cd ~ || exit
-sudo usermod -G vboxsf -a "$USER"
+sudo apt install git vim libevent-dev ncurses-dev zsh tmux dkms sni-qt g++ python-pip python3-pip python python3 cmake build-essential python-dev python3-dev sshpass xclip sshfs shellcheck checkinstall virtualbox-guest-utils nfs-common cifs-utils automake autotools-dev libtool default-jdk 
 
 #symlinking files
 
 rm -f "$HOME/gitconfig" 
 ln -s "$HOME/dotfiles/.vimrc" "$HOME/.vimrc"
 ln -s "$HOME/dotfiles/.tmux.conf" "$HOME/.tmux.conf"
-ln -s "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
 ln -s "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
 ln -s "$HOME/dotfiles/.spacemacs" "$HOME/.spacemacs"
-ln -s "$HOME/dotfiles/.zshenv" "$HOME/.zshenv"
+#ln -s "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
+#ln -s "$HOME/dotfiles/.zshenv" "$HOME/.zshenv"
+ln -s "$HOME/dotfiles/config.fish" "$HOME/.config/fish/config.fish"
 cd ~ || exit
 
 #zsh
-git clone https://github.com/tarjoilija/zgen.git .zgen
-sudo chsh -s "$(which zsh)"
-cd || exit
+#git clone https://github.com/tarjoilija/zgen.git .zgen
+#sudo chsh -s "$(which zsh)"
+#cd || exit
 
-
+#fish
+curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher #fisher
+sudo csh -s "$(which fish)"
+fisher pyenv gretel/fasd
 # sudo mount -t vboxsf FOLDERNAME /PATH/OF/FOLDER
 
 #VIM
