@@ -11,6 +11,7 @@ ln -s "$HOME/dotfiles/.gitconfig" "$HOME/.gitconfig"
 ln -s "$HOME/dotfiles/.spacemacs" "$HOME/.spacemacs"
 #ln -s "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
 #ln -s "$HOME/dotfiles/.zshenv" "$HOME/.zshenv"
+ln -s "$HOME/dotfiles/.globalrc" "$HOME/.globalrc"
 ln -s "$HOME/dotfiles/config.fish" "$HOME/.config/fish/config.fish"
 cd ~ || exit
 
@@ -61,10 +62,6 @@ else
 fi
 echo 'DONE! debug your program with gdb and enjoy'
 cd || exit
-
-#installing gems
-
-sudo gem install lastpass-ssh bropages
 
 #installing python
 curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
