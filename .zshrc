@@ -11,7 +11,6 @@ if ! zgen saved; then
   zgen load unixorn/autoupdate-zgen
   zgen load desyncr/auto-ls
   zgen load Tarrasch/zsh-command-not-found
-  zgen load zdharma/fast-syntax-highlighting
   zgen load zuxfoucault/colored-man-pages_mod
   zgen load RobSis/zsh-completion-generator
   zgen load zsh-users/zsh-autosuggestions
@@ -21,6 +20,8 @@ if ! zgen saved; then
   zgen prezto git
   zgen prezto completion
 
+
+  zgen load zdharma/fast-syntax-highlighting
   zgen save
 fi
 ###### Startup shell ######
@@ -34,14 +35,5 @@ export KEYTIMEOUT=1
 autoload -Uz promptinit
 promptinit
 prompt giddie
-eval "$(fasd --init auto)"
 # Aliases
 # alias cc++='g++ -time -Wall -pedantic -Wextra -pedantic-errors -std=c++11 -Wconversion'
-lpass status > /dev/null 2>&1
-if [[ $? != 0 ]]; then
-    lpass login cole.swingholm@gmail.com
-fi
-ssh-add -l > /dev/null 2>&1
-if [[ $? != 0 ]]; then
-    lastpass-ssh
-fi
