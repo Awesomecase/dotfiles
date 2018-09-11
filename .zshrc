@@ -28,7 +28,7 @@ fi
 export EDITOR='vim'
 # Vim stuff
 export PAGER='less'
-bindkey -v 
+bindkey -v
 bindkey '^R' history-incremental-search-backward
 export KEYTIMEOUT=1
 #prompt
