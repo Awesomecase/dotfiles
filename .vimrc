@@ -4,8 +4,8 @@ call plug#begin('~/.vim/bundle')
 
 Plug 'fweep/vim-zsh-path-completion'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'chrisbra/changesPlugin'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'mhinz/vim-signify'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'majutsushi/tagbar'
@@ -27,12 +27,11 @@ Plug 'Konfekt/FastFold'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-file.vim'
-Plug 'prabirshrestha/asyncomplete-buffer.vim'
 Plug 'wellle/tmux-complete.vim'
-if executable('cscope') 
-    Plug 'prabirshrestha/asyncomplete-tags.vim'
-    Plug 'ludovicchabant/vim-gutentags'
-elseif executable('ctags')
+"if executable('cscope') 
+"    Plug 'prabirshrestha/asyncomplete-tags.vim'
+"    Plug 'ludovicchabant/vim-gutentags'
+if executable('ctags')
     Plug 'prabirshrestha/asyncomplete-tags.vim'
     Plug 'ludovicchabant/vim-gutentags'
 endif
@@ -167,7 +166,6 @@ nmap zuz <Plug>(FastFoldUpdate)
 let g:fastfold_savehook = 1
 let g:fastfold_fold_command_suffixes = ['x','X','a','A','o','O','c','C','r','R','m','M','i','n','N']
 let g:fastfold_fold_movement_commands = [']z', '[z', 'zj', 'zk']
-
 "vim-tmux-navigator
 let g:tmux_navigator_save_on_switch = 1
 "ChangesPlugin
@@ -190,25 +188,18 @@ if has('python3')
         \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
         \ }))
 endif
-"Buffer
-call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
-    \ 'name': 'buffer',
-    \ 'whitelist': ['*'],
-    \ 'blacklist': ['go'],
-    \ 'completor': function('asyncomplete#sources#buffer#completor'),
-    \ }))
 "tags
-if executable('cscope') 
-    let g:gutetags_modules=['cscope']
-    au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#tags#get_source_options({
-        \ 'name': 'tags',
-        \ 'whitelist': ['*'],
-        \ 'completor': function('asyncomplete#sources#tags#completor'),
-        \ 'config': {
-        \    'max_file_size': 50000000,
-        \  },
-        \ }))
-elseif executable('ctags')
+"if executable('cscope') 
+"    let g:gutetags_modules=['cscope']
+"    au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#tags#get_source_options({
+"        \ 'name': 'tags',
+"        \ 'whitelist': ['*'],
+"        \ 'completor': function('asyncomplete#sources#tags#completor'),
+"        \ 'config': {
+"        \    'max_file_size': 50000000,
+"        \  },
+"        \ }))
+if executable('ctags')
     au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#tags#get_source_options({
         \ 'name': 'tags',
         \ 'whitelist': ['*'],
